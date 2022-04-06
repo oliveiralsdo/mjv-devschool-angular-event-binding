@@ -9,7 +9,7 @@
         <span class="desc">{{ task?.description }}</span>
       </div>
 
-      <div class="task-status">
+      <div class="task-status" [ngClass]="{ 'completed': task?.completed, 'uncompleted': !task?.completed }">
         <span class="button-completed" (click)="updateCompleted()">
           {{ task?.completed }}
         </span>
